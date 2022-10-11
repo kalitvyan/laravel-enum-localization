@@ -1,0 +1,62 @@
+{
+  "name": "kalitvyan/laravel-enum-localization",
+  "description": "Laravel Enums with Localizationgit",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Kalitvyan\\Enums\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Kalitvyan\\Enums\\Tests\\": "tests/"
+    }
+  },
+  "authors": [
+    {
+      "role": "Developer",
+      "name": "Kostya Kalitvyansky",
+      "email": "kalitvyan@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^8.1",
+    "illuminate/support": "^9.34"
+  },
+  "require-dev": {
+    "laravel/pint": "^1.2",
+    "orchestra/testbench": "^7.10",
+    "pestphp/pest": "^1.22",
+    "phpstan/phpstan": "^1.8"
+  },
+  "scripts": {
+    "test": "./vendor/bin/pest",
+    "fix": "./vendor/bin/pint",
+    "check": "./vendor/bin/pint --test -v",
+    "static": "./vendor/bin/phpstan analyse",
+    "all": [
+      "@test",
+      "@fix",
+      "@check",
+      "@static"
+    ]
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Kalitvyan\\Enums\\Providers\\PackageServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "sort-packages": true,
+    "preferred-install": "dist",
+    "optimize-autoloader": true,
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  }
+}

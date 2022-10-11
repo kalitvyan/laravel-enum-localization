@@ -1,0 +1,15 @@
+<?php
+
+namespace {{ namespace }};
+
+use Kalitvyan\Enums\Contracts\HasLocalization;
+use Kalitvyan\Enums\Traits\WithLocalization;
+
+enum {{ class }}: int implements HasLocalization
+{
+    use WithLocalization;
+
+    // case ONE = 1;
+    // case TWO = 2;
+    // case THREE = 3;
+}
